@@ -87,3 +87,61 @@ agent-level constraint로 다루며, validator가 사례 기반 invariant를
   자동 halt → planner 재호출
 - 모든 commit은 validator만 수행 (separation of duty)
 
+## 6. 보고서 lessons learned 주제 (작성 예정)
+
+1. 사례 기반 acceptance criteria의 효과
+2. Agent-level red line (사전 정의)의 효과
+3. 2-layer RBAC (코드 + 프로세스)의 defense in depth
+4. append-only log.md의 감사 추적성
+5. validator의 isolated context — bias 감소 vs 토큰 비용
+6. executor의 commit 권한 박탈의 scope creep 방지 효과
+7. 선언적 권한과 시스템적 강제의 차이
+
+## 7. 일정
+
+본 과제는 [ 2026-05-18 ]에 착수하여 [ 2026-06-08 ]에 제출 예정이다.
+첫 2주는 다음과 같이 진행한다.
+
+- D1~D2: 사례 분석, red line 정의, threat model
+- D3~D5: 요구사항 명세, plan.md 작성, 인프라 셋업
+- D6~D11: review cycle로 commit unit 6개 진행
+- D12: 통합 테스트, security invariant 자동 검증
+- D13: 보고서 작성, lessons learned 정량화
+- D14: polish, 제출
+
+## 8. 디렉토리 구조
+```
+.
+├── README.md
+├── plan.md                 # planner가 작성
+├── log.md                  # append-only 실행 로그
+├── .claude/
+│   └── CLAUDE.md           # agent red line
+├── docs/
+│   ├── case-studies/       # 참조 사례 분석
+│   │   ├── lovable-cve-2025-48757.md
+│   │   ├── enrichlead.md
+│   │   ├── lovable-inverted-logic.md
+│   │   └── ...
+│   ├── threat-model.md
+│   ├── requirements.md
+│   └── report.md           # 최종 보고서
+├── reviews/                # validator 산출물
+│   ├── commit-1-attempt-1.md
+│   └── ...
+├── src/                    # 본 SaaS 소스
+└── tests/
+```
+## 9. 산출물
+
+- 본 SaaS의 동작 캡처
+- 프로세스 적용 증빙: 본 repo의 commit history, plan.md, log.md, reviews/
+- 보고서 PDF: `docs/report.md`를 최종 PDF로 변환하여 제출
+
+## 10. 라이선스
+
+MIT
+
+---
+
+*본 README는 2026-05-18 작성되었으며, 프로젝트 진행에 따라 갱신된다.*
