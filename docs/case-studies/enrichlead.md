@@ -27,7 +27,19 @@ CVE가 할당되지는 않았으나 (단일 벤더 SaaS의 자체 폐쇄), 본 �
 
 ### 2.1 자가 보고된 증상
 
-Acevedo는 폐쇄 직전 X에 다음과 같이 게시했다 (요지):
+Acevedo는 폐쇄 직전 X에 다음과 같이 게시했다 (원문 및 요지):
+
+>guys, i'm under attack
+>
+>ever since I started to share how I built my SaaS using Cursor
+>
+>random thing are happening, maxed out usage on api keys, people bypassing the subscription, creating random shit on db
+>
+>as you know, I'm not technical so this is taking me longer that usual to figure out
+>
+>for now, I will stop sharing what I do publicly on X
+>
+>there are just some weird ppl out there
 
 > "공격받고 있다. 이상한 일들이 일어나고 있고, API 키 사용량이 최대치를
 > 찍었고, 사람들이 구독을 우회하고 있고, DB에 임의로 데이터를
